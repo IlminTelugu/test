@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Night Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-right {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      color: #fff;
+      background: none;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      box-shadow: none;
+      transition: opacity 0.3s ease;
+      opacity: 1;
+      z-index: 1000;
+    }
+
+    .top-right.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 80px 20px 20px;
+      gap: 20px;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (min-width: 600px) {
+      .gallery img {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clean arrow button -->
+  <a href="../mainfile/home.html" class="top-right"> →</a>
+
+ <div class="gallery">
+  <img src="https://i.ibb.co/MxnzSG54/file-000000007314622fa6ff1d59dd442ebc.png" alt="Image 1" />
+  <img src="https://i.ibb.co/GfJyVcJS/file-00000000c984622fab666ed0a2038e70.png" alt="Image 2" />
+  <img src="https://i.ibb.co/Y7pwrF00/file-0000000096fc61f9bca6aa95fde46c3e.png" alt="Image 3" />
+  <img src="https://i.ibb.co/j980gvQd/image-2.png" alt="Image 4" />
+  <img src="https://i.ibb.co/4xXvNRq/file-00000000b9fc61f58005fd028b6009d7.png" alt="Image 5" />
+  <img src="https://i.ibb.co/Q7Qdm8Y5/file-00000000d37061f7a776b8332ca2ed57.png" alt="Image 6" />
+  <img src="https://i.ibb.co/NdnJGnK4/IMG-20250709-095546.png" alt="Image 7" />
+  <img src="https://i.ibb.co/v6qJJRN6/file-0000000077d461f8b19879d26f05a3b2.png" alt="Image 8" />
+  <img src="https://i.ibb.co/sGtvVKP/file-000000001ad061f88da4915a22fe9fe5.png" alt="Image 9" />
+  <img src="https://i.ibb.co/3mrqsp43/Albedo-Base-XL-Comic-book-style-illustration-of-a-dark-quiet-b-3.jpg" alt="Image 10" />
+  <img src="https://i.ibb.co/j99RxF3j/Albedo-Base-XL-Comic-book-style-illustration-of-the-a-digital-c-1.jpg" alt="Image 11" />
+  <img src="https://i.ibb.co/xSvV9B3C/Lucid-Realism-a-cinematic-photo-of-a-serene-nighttime-forest-s-3.jpg" alt="Image 12" />
+  <img src="https://i.ibb.co/7J9K7GPF/file-00000000d354622f95daa91a2f94bd28.png" alt="Image 13" />
+  <img src="https://i.ibb.co/B5r77w4D/file-00000000530c61f6968f550d02800f76.png" alt="Image 14" />
+  <img src="https://i.ibb.co/pjNDh5Rv/file-000000002b1461f4940214d11f68e6bb.png" alt="Image 15" />
+</div>
+
+  <script>
+    const topButton = document.querySelector('.top-right');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY === 0) {
+        topButton.classList.remove('hidden');
+      } else {
+        topButton.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>

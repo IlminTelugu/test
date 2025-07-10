@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surah Ash-Shams – Roman Telugu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'EB Garamond', serif;
+      background-image: url('https://i.ibb.co/HTVYDN8W/file-00000000c3a461f890f1a8e52e045f02.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #3b2f2f;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .ayah {
+      margin-bottom: 2rem;
+    }
+
+    .ayah-number {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #5c4033;
+    }
+
+    .telugu {
+      color: #2e2e2e;
+      margin-top: 0.3rem;
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+
+    .audio-icon {
+      position: fixed;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1000;
+      user-select: none;
+    }
+
+    .audio-icon.hidden {
+      display: none;
+    }
+
+    .next-button {
+      display: block;
+      margin: 3rem auto 1rem;
+      padding: 0.6rem 2rem;
+      font-size: 1rem;
+      background-color: #5c4033;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #3b2c22;
+    }
+
+    audio {
+      display: none;
+    }
+
+    /* Arabic Popup with Image */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 10, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .popup-content {
+      background: #fdfdfc;
+      padding: 1rem;
+      border-radius: 14px;
+      max-width: 95%;
+      max-height: 90vh;
+      overflow: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    .popup-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    .back-button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.5rem;
+      background: #3b2f2f;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .back-button:hover {
+      background: #5c4033;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔊 Surah Audio Icon -->
+  <div class="audio-icon" id="audioIcon" onclick="toggleAudio()">🔊</div>
+  <audio id="surahAudio" src="../audio/098.mp3"></audio>
+
+  <!-- 📄 Page Flip Sound -->
+  <audio id="pageFlipAudio" src="flip.mp3"></audio>
+
+  <!-- 🕋 Title (click to open Arabic popup with image) -->
+  <h1 id="pageTitle" onclick="showArabicPopup()">సూరహ్ అల్ బయ్యిన హ్ – 📖</h1>
+    <div style="text-align:center; margin-bottom: 2rem;">
+    <div style="font-family: 'Noto Naskh Arabic', serif; font-size: 1.6rem; color: #3b2f2f;">
+      بِسْمِ ٱللّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </div>
+    <div class="telugu">బిస్మిల్లాహిర్ రహ్మానిర్ రహీమ్‌</div>
+  </div>
+
+
+  <!-- 📝 Roman Telugu Ayahs (placeholders) -->
+  <div class="ayah"><div class="ayah-number">1. Lam ya kunil lazeena kafaru min ahlil kitaabi wal mushri keena mun fak keena hattaa ta-tiya humul bayyinah</div><div class="telugu">గ్రంథవహులకు చెందిన తిరస్కారులు, బహుదైవారాధకులు తమ వద్దకు స్పష్టమైన నిదర్శనం రానంతవరకూ (తమ తిరస్కార వైఖరిని) మానుకోనివారుగా ఉండేవారు. (ఇంతకీ ఆ నిదర్శనం ఏమిటంటే...)</div></div>
+  <div class="ayah"><div class="ayah-number">2. Rasoolum minal laahi yatlu suhufam mutahharah</div><div class="telugu">పరిశుద్ధమైన గ్రంథ పత్రములను చదివి వినిపించే దైవప్రవక్త తమ వద్దకు రావాలి.</div></div>
+  <div class="ayah"><div class="ayah-number">3. Feeha kutubun qaiyimah</div><div class="telugu">మరి వాటిలో (ఆ గ్రంథ పత్రాలలో) స్థిరమైన, సవ్యమైన ఆదేశాలు ఉండాలి.</div></div>
+  <div class="ayah"><div class="ayah-number">4. Wa maa tafarraqal lazeena ootul kitaaba il-la mim b'adi ma jaa-at humul baiyyinah</div><div class="telugu">మరి (ఈ) గ్రంథ వహులు తీరా తమ వద్దకు స్పష్టమైన నిదర్శనం వచ్చేసిన తరువాతే (విభేదించుకొని) చీలిపోయారు.</div></div>
+  <div class="ayah"><div class="ayah-number">5. Wa maa umiroo il-la liy'abu dul laaha mukhliseena lahud-deena huna faa-a wa yuqeemus salaahta wa yu-tuz zakaata; wa zaalika deenul qaiyimah</div><div class="telugu">వారు అల్లాహ్ నే ఆరాధించాలని ధర్మాన్ని ఆయన కొరకే ప్రత్యేకించుకోవాలనీ, ఏకాగ్రచిత్తులై – నమాజును నెలకొల్పాలనీ, జకాత్ ను ఇస్తూ ఉండాలని మాత్రమే వారికి ఆదేశించబడింది. ఇదే స్థిరమైన సవ్యమైన ధర్మం.</div></div>
+  <div class="ayah"><div class="ayah-number">6. Innal lazeena kafaru min ahlil kitaabi wal mushri keena fee nari jahan nama khaali deena feeha; ulaa-ika hum shar rul ba reeyah</div><div class="telugu">గ్రంథవహులలో తిరస్కారవైఖరికి పాల్పడినవారు, బహుదైవారాధకులు తప్పకుండా నరకాగ్నికి ఆహుతి అవుతారు. వారందులో కలకాలం ఉంటారు. వారు సృష్టితాలలో అందరికంటే చెడ్డవారు.</div></div>
+  <div class="ayah"><div class="ayah-number">7. Innal lazeena aamanu wa 'amilus saalihaati ula-ika hum khairul bareey yah</div><div class="telugu">అయితే విశ్వసించి, సత్కార్యాలు చేసినవారు; నిశ్చయంగా సృష్టిలో వారే అందరికన్నా ఉత్తములు.</div></div>
+  <div class="ayah"><div class="ayah-number">8. Jazaa-uhum inda rabbihim jan naatu 'adnin tajree min tahtihal an haaru khalideena feeha abada; radiy-yallaahu 'anhum wa ra du 'an zaalika liman khashiya rabbah.</div><div class="telugu">వారికి ప్రతిఫలంగా వారి ప్రభువు దగ్గర శాశ్వతమైన స్వర్గ వనాలున్నాయి. వాటి క్రింద కాలువలు ప్రవహిస్తూ ఉంటాయి. వాటిలో వారు కలకాలం ఉంటారు. అల్లాహ్ వారి పట్ల ప్రసన్నుడయ్యాడు. వారు అల్లాహ్ పట్ల సంతోషపడ్డారు. ఈ అనుగ్రహ భాగ్యం తన ప్రభువుకు భయపడే వానికి మాత్రమే.</div></div>
+  
+  <!-- ✅ Next Button -->
+  <button class="next-button" onclick="goNext()">Next</button>
+
+  <!-- 📖 Arabic Popup with Surah Image -->
+  <div id="arabicPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+      <img src="https://i.ibb.co/4nHJQnTH/In-Shot-20250708-115851673.jpg" alt="Surah Ash-Shams Image" />
+      <button class="back-button" onclick="closeArabicPopup()">⬅ Back to Roman Telugu</button>
+    </div>
+  </div>
+
+  <!-- ✅ Scripts -->
+  <script>
+    const surahAudio = document.getElementById("surahAudio");
+    const audioIcon = document.getElementById("audioIcon");
+    const pageTitle = document.getElementById("pageTitle");
+    const pageFlipAudio = document.getElementById("pageFlipAudio");
+
+    function toggleAudio() {
+      if (surahAudio.paused) {
+        surahAudio.play();
+      } else {
+        surahAudio.pause();
+      }
+    }
+
+    function showArabicPopup() {
+      document.getElementById("arabicPopup").style.display = "flex";
+    }
+
+    function closeArabicPopup() {
+      document.getElementById("arabicPopup").style.display = "none";
+    }
+
+    window.addEventListener("scroll", function () {
+      const titleBottom = pageTitle.getBoundingClientRect().bottom;
+      if (titleBottom < 0) {
+        audioIcon.classList.add("hidden");
+      } else {
+        audioIcon.classList.remove("hidden");
+      }
+    });
+
+    function goNext() {
+      pageFlipAudio.play();
+      setTimeout(() => {
+        window.location.href = "s99.html";
+      }, 600);
+    }
+  </script>
+
+</body>
+</html>

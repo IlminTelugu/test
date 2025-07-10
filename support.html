@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>మద్దతు పేజీ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue-popsicle: #0f2862;
+      --redline: #9e363a;
+      --purple-shadow: #091f36;
+      --grey-blue-leaf: #4f5f76;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to right, var(--blue-popsicle), var(--grey-blue-leaf));
+      font-family: 'Noto Sans Telugu', sans-serif;
+      color: var(--purple-shadow);
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: auto;
+      background: #ffffff;
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(9, 31, 54, 0.3); /* Purple Shadow */
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--blue-popsicle);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--purple-shadow);
+      margin-bottom: 30px;
+    }
+
+    .support-button {
+      background: linear-gradient(to right, var(--redline), #7a2a2d);
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(158, 54, 58, 0.4);
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .support-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #7a2a2d, #601f22);
+      box-shadow: 0 6px 20px rgba(158, 54, 58, 0.6);
+    }
+
+    .dua {
+      margin-top: 35px;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--purple-shadow);
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>మీ మద్దతు మాకు విలువైనది</h1>
+    <p>
+      అస్సలాము అలైకుం వరహ్మతుల్లాహి వ బరకాతుహు 🌙<br><br>
+      మేము ఈ  ఇల్మ్ ఇన్ తెలుగు అప్లికేషన్ ద్వారా ఖుర్ఆన్, హదీస్, ఇస్లామిక్ విజ్ఞానం మరియు సహాయమైన సమాచారం అందిస్తున్నాం. <br><br>
+      ఈ ఖైర్ పనిని కొనసాగించడానికి మీరు మద్దతు ఇస్తే, అది మాకు ఒక మంచి సహాయం అవుతుంది. <br><br>
+      కింద ఉన్న లింక్‌ ద్వారా మద్దతు ఇవ్వవచ్చు. అల్లాహ్ (SWA) మీ సహాయాన్ని కబూల్ చేసును గాక.
+    </p>
+
+    <a href="http://youtube.com/post/UgkxbXquf5geSvxFyrphVn3ijb4krTQ8Dxkv?si=Je74mdWxMtvnhLoW"
+       class="support-button" target="_blank">
+       మద్దతు ఇవ్వండి ✨
+    </a>
+
+    <div class="dua">
+      جزاك اللهُ خيرًا — అల్లాహ్ మీకు మంచి ప్రతిఫలం ఇవ్వుగాక.
+    </div>
+  </div>
+</body>
+</html>

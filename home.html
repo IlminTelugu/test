@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telugu Islam</title>
+  <style>
+    .notebook-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: #001933;
+  color: #00d9ff;
+  border: 2px solid #00d9ff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1002;
+  box-shadow: 0 2px 5px black;
+}
+
+.notebook-button:hover {
+  background-color: #002a4d;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0b0c1a, #001f3f);
+      color: white;
+    }
+
+    .top-bar {
+      background-color: #001933;
+      color: #00d9ff;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 5px black;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 220px;
+      height: 100%;
+      background-color: #002244;
+      padding-top: 20px;
+      transition: 0.3s;
+      z-index: 1001;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #003366;
+    }
+
+    .side-menu a:hover {
+      background-color: #003355;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 15px;
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .grid-item {
+      text-align: center;
+      color: #bbf3ff;
+    }
+
+    .grid-item img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 0 0 6px rgba(0, 200, 255, 0.5);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .grid-item img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 12px rgba(0, 200, 255, 0.7);
+    }
+
+    .grid-item span {
+      display: block;
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    .ayah-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 10px;
+    }
+
+    .daily-ayah-container {
+      width: 250px;
+      background: #001933;
+      color: #bbf3ff;
+      padding: 20px;
+      border: 2px solid #00d9ff;
+      box-shadow: 0 4px 20px rgba(0, 200, 255, 0.3);
+      border-radius: 12px;
+      text-align: center;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .daily-ayah-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #00e6ff;
+    }
+
+    .daily-ayah-text {
+      font-size: 1rem;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Notebook Button (Top-Right) -->
+<button onclick="location.href='notebook.html'" class="notebook-button">📓 Notebook</button>
+
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    ఇల్మ్ ఇన్ తెలుగు
+  </div>
+  
+
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="support.html">🛠️ Support</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="#" onclick="shareWhatsApp()">📤 Share</a>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Image Grid -->
+  <div class="grid">
+    <div class="grid-item">
+      <a href="surahlist.html">
+        <img src="https://i.ibb.co/whdLRQQZ/image.png" alt="Islamic Surahs" />
+      </a>
+      <span>📖 చిన్న సూరాలు </span>
+    </div>
+    <div class="grid-item">
+      <a href="dualist.html">
+        <img src="https://i.ibb.co/TxJ0CR2B/image.png" alt="Islamic Duas" />
+      </a>
+      <span>🤲 ఇస్లామిక్ దుఆలు</span>
+    </div>
+    <div class="grid-item">
+      <a href="z1.html">
+        <img src="https://i.ibb.co/qYvs7TRx/you-did-it.png" alt="Islamic Images" />
+      </a>
+      <span>📜 జిక్ర్ </span>
+    </div>
+    <div class="grid-item">
+      <a href="img.html">
+        <img src="https://i.ibb.co/bRYrYHfR/image.png" alt="Telugu Quran" />
+      </a>
+      <span>🖼️ ఇస్లామిక్ చిత్రాలు</span>
+    </div>
+  </div>
+
+  <!-- Rotating Ayah Container -->
+  <div class="ayah-wrapper">
+    <div class="daily-ayah-container">
+      <div class="daily-ayah-title">📜 అయత్:</div>
+      <div class="daily-ayah-text" id="ayahText">లోడ్ అవుతోంది...</div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+
+    function shareWhatsApp() {
+      const message = encodeURIComponent("📿 Visit the Telugu Islamic website: https://yourwebsite.com");
+      window.open(`https://wa.me/?text=${message}`, "_blank");
+    }
+
+    const teluguAyahs = [
+      "అల్లాహ్‌ ఏ ప్రాణిపైనా దాని శక్తికి మించిన భారం వేయడు. (ఖుర్ఆన్ 2:286)",
+      "నిశ్చయంగా (ప్రతి) కష్టంతో పాటే సౌలభ్యం కూడా ఉంది.. (ఖుర్ఆన్ 94:6)",
+      "మీపై విపత్తు వచ్చిపడకముందే మీరు మీ ప్రభువు వైపునకు మరలండి. ఆయనకు విధేయత చూపండి. (ఖుర్ఆన్ 39:54)",
+      "ఆకాశాలలో, భూమిలో ఉన్న సమస్తమూ ఆ అల్లాహ్‌దే. తిరస్కారుల కొరకు కఠిన శిక్ష మూలంగా వినాశం ఉంది.. (ఖుర్ఆన్ 14:2)",
+      "నమాజ్ అసహ్యకరమైన పనుల నుండి మరియు అధర్మమైన పనుల నుండి నిషేధిస్తుంది. (ఖుర్ఆన్ 29:45)",
+      "ఓ విశ్వాసులారా! సహనం మరియు నమాజ్ ద్వారా సహాయం అర్థించండి. నిశ్చయంగా, అల్లాహ్ సహనం గలవారితో ఉంటాడు. (ఖుర్ఆన్ 2:153)",
+      "మరియు అల్లాహ్ మీద నమ్మకం ఉంచుకున్న వానికి ఆయనే చాలు. (ఖుర్ఆన్ 65:3)",
+    ];
+
+    let currentIndex = 0;
+    function rotateAyah() {
+      document.getElementById("ayahText").innerText = teluguAyahs[currentIndex];
+      currentIndex = (currentIndex + 1) % teluguAyahs.length;
+    }
+
+    // Initial display
+    rotateAyah();
+    // Update every 15 seconds
+    setInterval(rotateAyah, 15000);
+  </script>
+
+</body>
+</html>

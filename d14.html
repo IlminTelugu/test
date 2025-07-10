@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>ఇస్లామిక్ దువా</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background-image: url('https://i.ibb.co/HTVYDN8W/file-00000000c3a461f890f1a8e52e045f02.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #3e2f20;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .arabic-box {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      max-width: 700px;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .arabic {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 2rem;
+      color: #4b3621;
+      text-align: right;
+      direction: rtl;
+      line-height: 1.8;
+    }
+
+    .roman {
+      max-width: 700px;
+      width: 100%;
+      font-size: 1.2rem;
+      color: #2e2e2e;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .bavam {
+      max-width: 700px;
+      width: 100%;
+      font-size: 1.1rem;
+      color: #3a2d1f;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      font-family: 'Noto Serif Telugu', serif;
+    }
+
+    .next-button {
+      margin-top: 2rem;
+      padding: 0.3rem 1rem;
+      background: transparent;
+      border: 1px solid #d2b98b;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #5a3e1b;
+      text-decoration: none;
+      font-family: 'EB Garamond', serif;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .next-button:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .emoji-btn {
+      margin-top: 1.5rem;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .emoji-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .feedback {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      color: #3b2d1f;
+      font-weight: 600;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .modal-box {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #ddd0aa;
+      backdrop-filter: blur(8px);
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 300px;
+    }
+
+    .modal-buttons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .modal-buttons button {
+      padding: 0.4rem 1rem;
+      border: 1px solid #cbb27b;
+      background: transparent;
+      border-radius: 8px;
+      font-family: 'EB Garamond', serif;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .modal-buttons button:hover {
+      background: #fff9e6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>తుమ్మినపుడు చేయు దుఆలు</h1>
+
+ <!-- దువా 15: తుమ్మినప్పుడు చెప్పే దువాలు -->
+
+<h3> తుమ్మిన వ్యక్తి మొదట అంటాడు</h3>
+<div class="arabic-box">
+  <p class="arabic">الْحَمْدُ لِلهِ‏</p>
+</div>
+<p class="roman">Alhamdulillah</p>
+<p class="bavam">భావం: సమస్త స్తోత్రములు అల్లాహ్ కే  చెందును.</p>
+
+<h4>విన్న సోదరుడు లేదా స్నేహితుడు ఇలా బదులివ్వాలి</h4>
+<div class="arabic-box">
+  <p class="arabic">يَرْحَمُكَ اللهُ</p>
+</div>
+<p class="roman">Yarhamuk-Allah</p>
+<p class="bavam">భావం: అల్లాహ్ నిన్ను కరుణించుగాక.</p>
+
+<h4>మళ్లీ తుమ్మిన వ్యక్తి ఇలా అనాలి</h4>
+<div class="arabic-box">
+  <p class="arabic">يَهْدِيكُمُ اللهُ وَيُصْلِحُ بَالَكُمْ</p>
+</div>
+<p class="roman">Yahdikumul-lahu wa Yuslihu baalakum</p>
+<p class="bavam">భావం: అల్లాహ్ మీకు రుజుమార్గాన్ని ప్రసాదించి, మీ వ్యవహారాలను చక్కదిద్దుగాక.</p>
+
+  <a href="d15.html" class="next-button">తరువాత దువా →</a>
+
+  <div class="emoji-btn" onclick="openModal()">🔍</div>
+  <div class="feedback" id="feedback"></div>
+
+  <!-- మోడల్ -->
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <p>మీరు ఈ దువా నేర్చుకున్నారా?</p>
+      <div class="modal-buttons">
+        <button onclick="respond('yes')">అవును</button>
+        <button onclick="respond('no')">లేదు</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function respond(answer) {
+      const feedback = document.getElementById("feedback");
+      if (answer === "yes") {
+        feedback.textContent = "మాషా అల్లాహ్ 🌟";
+      } else {
+        feedback.textContent = "💔 ఇన్‌షా అల్లాహ్, తర్వాత ఖచ్చితంగా నేర్చుకోండి!";
+      }
+      closeModal();
+    }
+  </script>
+
+</body>
+</html>

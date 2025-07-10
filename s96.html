@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surah Ash-Shams – Roman Telugu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'EB Garamond', serif;
+      background-image: url('https://i.ibb.co/HTVYDN8W/file-00000000c3a461f890f1a8e52e045f02.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #3b2f2f;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .ayah {
+      margin-bottom: 2rem;
+    }
+
+    .ayah-number {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #5c4033;
+    }
+
+    .telugu {
+      color: #2e2e2e;
+      margin-top: 0.3rem;
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+
+    .audio-icon {
+      position: fixed;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1000;
+      user-select: none;
+    }
+
+    .audio-icon.hidden {
+      display: none;
+    }
+
+    .next-button {
+      display: block;
+      margin: 3rem auto 1rem;
+      padding: 0.6rem 2rem;
+      font-size: 1rem;
+      background-color: #5c4033;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #3b2c22;
+    }
+
+    audio {
+      display: none;
+    }
+
+    /* Arabic Popup with Image */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 10, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .popup-content {
+      background: #fdfdfc;
+      padding: 1rem;
+      border-radius: 14px;
+      max-width: 95%;
+      max-height: 90vh;
+      overflow: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    .popup-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    .back-button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.5rem;
+      background: #3b2f2f;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .back-button:hover {
+      background: #5c4033;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔊 Surah Audio Icon -->
+  <div class="audio-icon" id="audioIcon" onclick="toggleAudio()">🔊</div>
+  <audio id="surahAudio" src="../audio/096.mp3"></audio>
+
+  <!-- 📄 Page Flip Sound -->
+  <audio id="pageFlipAudio" src="flip.mp3"></audio>
+
+  <!-- 🕋 Title (click to open Arabic popup with image) -->
+  <h1 id="pageTitle" onclick="showArabicPopup()">సూరహ్ అల్ అలఖ్ – 📖</h1>
+    <div style="text-align:center; margin-bottom: 2rem;">
+    <div style="font-family: 'Noto Naskh Arabic', serif; font-size: 1.6rem; color: #3b2f2f;">
+      بِسْمِ ٱللّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </div>
+    <div class="telugu">బిస్మిల్లాహిర్ రహ్మానిర్ రహీమ్‌</div>
+  </div>
+
+
+  <!-- 📝 Roman Telugu Ayahs (placeholders) -->
+  <div class="ayah"><div class="ayah-number">1. Iqra bismi rab bikal lazee khalaq</div><div class="telugu">(ఓ ముహమ్మద్ సల్లల్లాహు అలైహివ సల్లం!) చదువు, సృష్టించిన నీ ప్రభువు పేరుతో.</div></div>
+  <div class="ayah"><div class="ayah-number">2. Khalaqal insaana min 'alaq</div><div class="telugu">ఆయన మనిషిని నెత్తుటి ముద్దతో సృష్టించాడు.</div></div>
+  <div class="ayah"><div class="ayah-number">3. Iqra wa rab bukal akram</div><div class="telugu">నువ్వు చదువుతూ పో. నీ ప్రభువు దయాశీలి.</div></div>
+  <div class="ayah"><div class="ayah-number">4. Al lazee 'allama bil qalam</div><div class="telugu">ఆయన కలం ద్వారా (జ్ఞాన) బోధ చేశాడు.</div></div>
+  <div class="ayah"><div class="ayah-number">5. 'Al lamal insaana ma lam y'alam</div><div class="telugu">ఆయన మనిషికి, అతడు ఎరుగని దానిని నేర్పాడు.</div></div>
+  <div class="ayah"><div class="ayah-number">6. Kallaa innal insaana layatghaa</div><div class="telugu">అది కాదు. అసలు విషయం ఏమిటంటే మానవుడు హద్దు మీరి పోతున్నాడు.</div></div>
+  <div class="ayah"><div class="ayah-number">7. Ar-ra aahus taghnaa</div><div class="telugu">ఎందుకంటే, తనకు ఎవరి అవసరమూ లేదన్న భావన అతనికుంది.</div></div>
+  <div class="ayah"><div class="ayah-number">8. Innna ilaa rabbikar ruj'aa</div><div class="telugu">నిశ్చయంగా (అందరూ) మరలిపోవలసింది నీ ప్రభువు వైపే.</div></div>
+  <div class="ayah"><div class="ayah-number">9. Ara-aital lazee yanhaa</div><div class="telugu">అడ్డు తగిలేవాడిని నీవు చూశావా?</div></div>
+  <div class="ayah"><div class="ayah-number">10. 'Abdan iza sallaa</div><div class="telugu">ఒక దాసుణ్ణి , అతను నమాజు చేస్తుండగా (అడ్డుకున్నాడు).</div></div>
+  <div class="ayah"><div class="ayah-number">11. Ara-aita in kana 'alal hudaa</div><div class="telugu">ఇదిగో చూడు! ఒకవేళ అతను గనక సన్మార్గాన ఉంటే...</div></div>
+  <div class="ayah"><div class="ayah-number">12. Au amara bit taqwaa</div><div class="telugu">లేదా అతను భయభక్తులను గురించి ఆజ్ఞాపిస్తూ ఉన్నట్లయితే.... (అతని గురించి నీ ఉద్దేశం ఏమిటి?)</div></div>
+  <div class="ayah"><div class="ayah-number">13. Ara-aita in kaz zaba wa ta walla</div><div class="telugu">ఇదిగో చూడు! వాడేమో ధిక్కార వైఖరిని అవలంబిస్తూ, ముఖం త్రిప్పుకొని పోతుంటే ...(వాడి గురించి నీ అభిప్రాయం ఏమిటి?)</div></div>
+
+ <div class="ayah"><div class="ayah-number">14. Alam y'alam bi-an nal lahaa yaraa</div><div class="telugu">ఏమిటి, అల్లాహ్ తనను గమనిస్తున్నాడన్న విషయం అతనికి తెలియదా?</div></div>
+
+ <div class="ayah"><div class="ayah-number">15. Kalla la illam yantahi la nasfa'am bin nasiyah</div><div class="telugu">కానేకాదు. ఒకవేళ వాడు గనక (తన వ్యతిరేక ధోరణిని) మానుకోకపోతే మేము వాడి నుదుటి జుత్తును పట్టి ఈడుస్తాము.</div></div>
+
+ <div class="ayah"><div class="ayah-number">16. Nasiyatin kazi batin khaatiyah</div><div class="telugu">అబద్ధాలతో, దురంతాలతో కూడుకున్న (వాడి) నుదుటి జుత్తును!</div></div>
+
+ <div class="ayah"><div class="ayah-number">17. Fal yad'u naadiyah</div><div class="telugu">(కావాలంటే) వాడు తన సలహా మండలి సభ్యులను (సహాయార్ధం) పిలుచుకోవచ్చు.</div></div>
+
+ <div class="ayah"><div class="ayah-number">18. Sanad 'uz zabaaniyah</div><div class="telugu">మేము కూడా (నరక) భటులను పిలుస్తాము.</div></div>
+
+
+ <div class="ayah"><div class="ayah-number">19. Kalla; la tuti'hu wasjud waqtarib ( 🔰make sajda)</div><div class="telugu">తస్మాత్ జాగ్రత్త! నువ్వు వాడి మాట వినకు. (నీ ప్రభువు సన్నిధిలో) సాష్టాంగ పడి, సామీప్యం పొందు. (🔰సజదా)</div></div>
+
+
+
+
+
+
+
+
+  <!-- ✅ Next Button -->
+  <button class="next-button" onclick="goNext()">Next</button>
+
+  <!-- 📖 Arabic Popup with Surah Image -->
+  <div id="arabicPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+      <img src="https://i.ibb.co/Mkhpq9MF/IMG-20250708-185410.jpg" alt="Surah Ash-Shams Image" />
+      <button class="back-button" onclick="closeArabicPopup()">⬅ Back to Roman Telugu</button>
+    </div>
+  </div>
+
+  <!-- ✅ Scripts -->
+  <script>
+    const surahAudio = document.getElementById("surahAudio");
+    const audioIcon = document.getElementById("audioIcon");
+    const pageTitle = document.getElementById("pageTitle");
+    const pageFlipAudio = document.getElementById("pageFlipAudio");
+
+    function toggleAudio() {
+      if (surahAudio.paused) {
+        surahAudio.play();
+      } else {
+        surahAudio.pause();
+      }
+    }
+
+    function showArabicPopup() {
+      document.getElementById("arabicPopup").style.display = "flex";
+    }
+
+    function closeArabicPopup() {
+      document.getElementById("arabicPopup").style.display = "none";
+    }
+
+    window.addEventListener("scroll", function () {
+      const titleBottom = pageTitle.getBoundingClientRect().bottom;
+      if (titleBottom < 0) {
+        audioIcon.classList.add("hidden");
+      } else {
+        audioIcon.classList.remove("hidden");
+      }
+    });
+
+    function goNext() {
+      pageFlipAudio.play();
+      setTimeout(() => {
+        window.location.href = "s97.html";
+      }, 600);
+    }
+  </script>
+
+</body>
+</html>

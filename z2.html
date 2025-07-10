@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>జిక్ర్</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background-image: url('https://i.ibb.co/HTVYDN8W/file-00000000c3a461f890f1a8e52e045f02.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 7rem; /* space for fixed buttons */
+    }
+
+    .content {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #3e2f20;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .arabic-box {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .arabic {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 2rem;
+      color: #4b3621;
+      text-align: center;
+      direction: rtl;
+      line-height: 1.8;
+    }
+
+    .roman {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      text-align: center;
+      color: #2e2e2e;
+    }
+
+    .bavam {
+      font-size: 1.1rem;
+      margin-top: 0.3rem;
+      color: #3a2d1f;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+      border: 1px solid #d2c2a4;
+      max-width: 350px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+      display: none;
+    }
+
+    .input-box label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3a2d1f;
+    }
+
+    input[type="number"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 80%;
+      border-radius: 8px;
+      border: 1px solid #b79e6f;
+      margin-top: 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: #2e2e2e;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #aa905c;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'EB Garamond', serif;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #fff9e6;
+    }
+
+    .result {
+      font-size: 1.2rem;
+      color: #4a331c;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .next-button {
+      position: fixed;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.5rem 1.2rem;
+      background: transparent;
+      border: 1px solid #d2b98b;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #5a3e1b;
+      text-decoration: none;
+      font-family: 'EB Garamond', serif;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .next-button:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: translate(-50%, -2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .show-input-btn {
+      position: fixed;
+      bottom: 1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+      z-index: 11;
+    }
+
+    .show-input-btn:hover {
+      transform: translateX(-50%) scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>జిక్ర్</h1>
+
+    <div class="arabic-box">
+  <p class="arabic">الْحَمْدُ لِلّٰهِ</p>
+  <p class="roman">Alhamdulillah</p>
+  <p class="roman">అల్హమ్దులిల్లాహ్</p>
+  <p class="bavam">భావం: సమస్త స్తుతులు అల్లాహ్‌కే చెందును.</p>
+</div>
+
+    <div class="input-box" id="inputBox">
+      <label for="count">ఎన్ని సార్లు చదివారు?</label><br>
+      <input type="number" id="count" min="0" placeholder="సంఖ్య నమోదు చేయండి"><br>
+      <button onclick="checkZikr()">సబ్మిట్ చేయండి</button>
+      <div class="result" id="resultText"></div>
+    </div>
+  </div>
+
+  <!-- Fixed buttons at bottom -->
+  <a href="z3.html" class="next-button">తరువాత జిక్ర్ →</a>
+  <div class="show-input-btn" onclick="toggleInput()">🍁</div>
+
+  <script>
+    function toggleInput() {
+      const inputBox = document.getElementById('inputBox');
+      inputBox.style.display = inputBox.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkZikr() {
+      const count = parseInt(document.getElementById("count").value);
+      const result = document.getElementById("resultText");
+
+      if (isNaN(count)) {
+        result.textContent = "దయచేసి సంఖ్యను నమోదు చేయండి";
+        return;
+      }
+
+      if (count < 10) {
+        result.textContent = "పరవాలేదు";
+      } else if (count < 50) {
+        result.textContent = "ఇలా గానే కొనసాగించండి";
+      } else if (count < 100) {
+        result.textContent = "అద్భుతం";
+      } else if (count < 500) {
+        result.textContent = "చాలా అద్భుతం";
+      } else {
+        result.textContent = "ఇతరులకు కూడా నిరూపించండి అలాగే రుజు చదవండి మాషా అల్లాహ్";
+      }
+    }
+  </script>
+
+</body>
+</html>
