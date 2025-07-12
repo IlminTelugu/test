@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="te">
 <head>
+  <!-- Open Graph Meta Tags (for preview when shared) -->
+<meta property="og:title" content="తెలుగు ఇస్లాం – తెలుగులో ఇస్లామిక్ జ్ఞానం" />
+<meta property="og:description" content="సూరాలు, దుఆలు, ఖుర్ఆన్ మరియు జిక్ర్ తెలుగులో తెలుసుకోండి." />
+<meta property="og:image" content="https://i.ibb.co/W4JTRxsx/IMG-20250712-123647.jpg" />
+<meta property="og:url" content="https://ilmintelugu.github.io/test/" />
+<meta property="og:type" content="website" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Telugu Islam</title>
@@ -188,29 +195,42 @@
 
   <!-- Image Grid -->
   <div class="grid">
+    
     <div class="grid-item">
       <a href="surahlist.html">
-        <img src="https://i.ibb.co/whdLRQQZ/image.png" alt="Islamic Surahs" />
+        <img src="tsurahimg.png" alt="Islamic Surahs" />
       </a>
       <span>📖 చిన్న సూరాలు </span>
     </div>
     <div class="grid-item">
       <a href="dualist.html">
-        <img src="https://i.ibb.co/TxJ0CR2B/image.png" alt="Islamic Duas" />
+        <img src="tduaimg.png" alt="Islamic Duas" />
       </a>
       <span>🤲 ఇస్లామిక్ దుఆలు</span>
     </div>
     <div class="grid-item">
+      <a href="tquranimg.png">
+        <img src="tquranimg.png" alt="Islamic Surahs" />
+      </a>
+      <span>📘 తెలుగు ఖుర్ఆన్ </span>
+    </div>
+    <div class="grid-item">
       <a href="z1.html">
-        <img src="https://i.ibb.co/qYvs7TRx/you-did-it.png" alt="Islamic Images" />
+        <img src="tzikrimg.png" alt="Islamic Images" />
       </a>
       <span>📜 జిక్ర్ </span>
     </div>
     <div class="grid-item">
-      <a href="img.html">
-        <img src="https://i.ibb.co/bRYrYHfR/image.png" alt="Telugu Quran" />
+      <a href="islamicimg.png">
+        <img src="islamicimg.png" alt="Telugu Quran" />
       </a>
-      <span>🖼️ ఇస్లామిక్ చిత్రాలు</span>
+      <span>🖼️ గ్యాలరీ</span>
+    </div>
+    <div class="grid-item">
+      <a href="dualist.html">
+        <img src="tquiz.png" alt="Islamic Duas" />
+      </a>
+      <span>🤲 ఇస్లామిక్ </span>
     </div>
   </div>
 
@@ -229,10 +249,15 @@
       document.getElementById("overlay").classList.toggle("show");
     }
 
-    function shareWhatsApp() {
-      const message = encodeURIComponent("📿 Visit the Telugu Islamic website: https://yourwebsite.com");
-      window.open(`https://wa.me/?text=${message}`, "_blank");
-    }
+   
+  function shareWhatsApp() {
+    const siteLink = "https://ilmintelugu.github.io/test/";
+    const imageUrl = "https://i.ibb.co/W4JTRxsx/IMG-20250712-123647.jpg";
+    const message = encodeURIComponent(`📿 తెలుగులో ఇస్లాం గురించి తెలుసుకోండి:\n${siteLink}\n🖼️ ఈ చిత్రం చూడండి:\n${imageUrl}`);
+    window.open(`https://wa.me/?text=${message}`, "_blank");
+  }
+
+
 
     const teluguAyahs = [
       "అల్లాహ్‌ ఏ ప్రాణిపైనా దాని శక్తికి మించిన భారం వేయడు. (ఖుర్ఆన్ 2:286)",
